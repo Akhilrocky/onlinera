@@ -1,0 +1,28 @@
+<div id="content-container"></div>
+<button onclick="loadNextpage()">next</button>
+<script>
+    // Array to store the file names
+    var fileNames = ["one.html","two.html","three.html","four.html"]
+    // variable to keep track of the current page
+    var currentpage =0;
+   // Function to load the content of the next page
+   function loadNextpage() {
+     if (currentpage < fileNames.length) {
+       var fileName =fileNames[currentpage];
+       var container = document.getElementById("content-container");
+       fetch(fileName)
+         .then(response => response.text())
+         .then(data => {
+           container.innerHTML = data;
+           currentpage++;
+        })
+         .catch(error => {
+            console.log('Error loading file:',error);
+        });
+     } else {
+       // Handle end of pages or redirection to another page
+       alert("End of pages reached");
+
+     }
+   }
+ </script>

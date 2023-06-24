@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <script>
+        function page(){
+      window.open("status");       
+        }
+    </script>
+    <style>
+    .container {
+      width: 400px;
+      margin: 0 auto;
+    }
+
+    .form-group {
+      margin-bottom: 10px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group input[type="password"] {
+      width: 100%;
+      padding: 5px;
+    }
+
+    .form-group input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Client Sign Up</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password:</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="Sign Up" onclick="redirectToSuccess()">
+      </form>
+    
+      <script>
+        function redirectToSuccess() {
+          window.location.href = "success.html";
+        }
+      </script>
+    </body>
+    </html>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Freelancer Signup</title>
+</head>
+<body>
+  <h2>Freelancer Signup</h2>
+  
+  <form action="process_signup.php" method="POST">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br><br>
+    
+    <label for="skills">Skills:</label>
+    <input type="text" id="skills" name="skills"><br><br>
+    
+    <label for="portfolio">Portfolio:</label>
+    <input type="text" id="portfolio" name="portfolio"><br><br>
+    
+    <input type="submit" value="Sign Up" onclick="redirectToSuccess()">
+  </form>
+
+  <script>
+    function redirectToSuccess() {
+      window.location.href = "success.html";
+    }
+  </script>
+</body>
+</html>
+</head>
+<body style="text-align: center;" >
+    <div class="container">
+        <div class="button">
+        <button onclick="page()" style="font-size: 50px">Sign up </button>
+        </div>
+    </div>
+</body>
+</html>
+
+
+ 
+    
